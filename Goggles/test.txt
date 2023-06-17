@@ -1,4 +1,17 @@
-! name: My Goggle
-! description: What my Goggle does
+! name: TW Frist
+! description: Rerank results to boost content from TAIWAN. Discard .CN
 ! public: false
 ! author: Me
+
+$discard,site=^.cn
+$discard,site=baidu.com
+$discard,site=bilibili.com
+$discard,site=qq.com
+
+$boost=1,site=^.tw
+/zh-tw.$boost=1
+/zh-tw/$boost=1
+/zh-hant.$boost=1
+/zh-hant/$boost=1
+/zh-cn.$discard
+/zh-cn/$discard
