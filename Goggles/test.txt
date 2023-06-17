@@ -3,15 +3,18 @@
 ! public: false
 ! author: Me
 
-$discard,site=.cn
-$discard,site=baidu.com
-$discard,site=bilibili.com
-$discard,site=qq.com
-
 $boost=1,site=.tw
+
 /zh-tw.$boost=1
 /zh-tw/$boost=1
 /zh-hant.$boost=1
 /zh-hant/$boost=1
+
+$discard,site=.cn
+$discard,site=zhihu.com
+$discard,site=baidu.com
+$discard,site=bilibili.com
+$discard,site=qq.com
+
 /zh-cn.$discard
 /zh-cn/$discard
