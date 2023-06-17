@@ -1,0 +1,28 @@
+! name: TW Frist
+! description: Rerank results to boost content from TAIWAN. Discard .CN
+! public: false
+! author: Me
+
+$boost=3,site=.tw
+
+/trad.$boost=3
+/trad/$boost=3
+/zh-tw.$boost=3
+/zh-tw/$boost=3
+/zh-hant.$boost=3
+/zh-hant/$boost=3
+
+$discard,site=gov.cn
+$discard,site=com.cn
+$discard,site=zhihu.com
+$discard,site=baidu.com
+$discard,site=bilibili.com
+$discard,site=qq.com
+$discard,site=ifeng.com
+$discard,site=huanqiu.com
+$discard,site=tiktok.com
+
+/zh-cn.$downrank=3
+/zh-cn/$downrank=3
+/gb.$downrank=3
+/gb/$downrank=3
